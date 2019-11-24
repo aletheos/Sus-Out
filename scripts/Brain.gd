@@ -2,6 +2,7 @@ extends Node
 
 var correctSequence :PoolByteArray
 var guessedSequence :PoolByteArray
+var respondSequence :PoolByteArray
 var turnCounter :int
 
 func funcName(arg1:int, arg2:int) -> int:
@@ -50,11 +51,11 @@ func _process(delta):
 			
 			#Advance to next turn unless victory
 			if guessedSequence != correctSequence:
-				$Alien/AnimationPlayer.play("ArmatureAction2")
+				$Alien/AnimationPlayer.play("ArmatureAction2", 1.0)
 				guessedSequence.resize(0)
 				turnCounter += 1
 	else:
 		#Game Over!
 		if not $Alien/AnimationPlayer.is_playing():
-			$Alien/AnimationPlayer.play("ArmatureAction1")
+			$Alien/AnimationPlayer.play("ArmatureAction1", 1.0)
 			print("END OF THE WORLD")
