@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
-[ext_resource path="res://Art Assets/Material_001.material" type="Material" id=1]
+[ext_resource path="res://scripts/characters/Alien.gd" type="Script" id=1]
+[ext_resource path="res://Art Assets/Material_001.material" type="Material" id=2]
 
 [sub_resource type="ArrayMesh" id=1]
 resource_name = "Retopo_Mesh"
@@ -11,7 +12,7 @@ surfaces/0 = {
 "blend_shape_data": [  ],
 "format": 97751,
 "index_count": 23364,
-"material": ExtResource( 1 ),
+"material": ExtResource( 2 ),
 "primitive": 4,
 "skeleton_aabb": [ AABB( -0.871571, -0.829759, -0.582744, 1.74314, 1.44703, 1.26464 ), AABB( -0.995728, -0.087635, -0.582744, 1.99146, 1.26766, 1.26464 ), AABB( -0.995728, 0.642977, -0.492945, 0.995728, 0.940419, 1.07958 ), AABB( -1.09696, 0.642977, 0.0275517, 0.650138, 0.648961, 1.58132 ), AABB( -1.08757, 0.539344, 1.54422, 0.339007, 0.732808, 1.20984 ), AABB( -1.08949, 0.326868, 2.5762, 0.603443, 0.461986, 0.474298 ), AABB( 0, 0, 0, -1, -1, -1 ), AABB( -0.856761, 0.326868, 2.74974, 0.370715, 0.290248, 0.253461 ), AABB( 0, 0, 0, -1, -1, -1 ), AABB( -1.11902, 0.44651, 2.98237, 0.295578, 0.216274, 0.230294 ), AABB( -1.14772, 0.417109, 3.14405, 0.314894, 0.166461, 0.227759 ), AABB( -1.15403, 0.395181, 3.29811, 0.31466, 0.137677, 0.208446 ), AABB( 0, 0.642977, -0.492945, 0.995728, 0.940419, 1.07958 ), AABB( 0.44682, 0.642977, 0.0275517, 0.650138, 0.648961, 1.58132 ), AABB( 0.748567, 0.539344, 1.54422, 0.339007, 0.732808, 1.20984 ), AABB( 0.486046, 0.326868, 2.5762, 0.603443, 0.461986, 0.474298 ), AABB( 0, 0, 0, -1, -1, -1 ), AABB( 0.486046, 0.326868, 2.74974, 0.370715, 0.290248, 0.253461 ), AABB( 0, 0, 0, -1, -1, -1 ), AABB( 0.823443, 0.44651, 2.98237, 0.295578, 0.216274, 0.230294 ), AABB( 0.832829, 0.417109, 3.14405, 0.314894, 0.166461, 0.227759 ), AABB( 0.839373, 0.395181, 3.29811, 0.31466, 0.137677, 0.208446 ), AABB( -0.617576, 1.14099, -0.384885, 1.23515, 0.804134, 0.940832 ), AABB( -0.710838, 1.46403, -0.305462, 1.42168, 1.60154, 1.09026 ), AABB( 0.028115, 1.75553, 0.653673, 0.0655421, 0.0688831, 0.064566 ), AABB( -0.0936571, 1.75553, 0.653673, 0.0655421, 0.0688831, 0.064566 ), AABB( 0.023956, 1.87327, 0.695227, 0.0554022, 0.0690699, 0.0618808 ), AABB( -0.0793582, 1.87327, 0.695227, 0.0554022, 0.0690699, 0.0618708 ), AABB( 0.0239424, 1.98008, 0.713199, 0.0561356, 0.0708337, 0.0629859 ), AABB( -0.080078, 1.98008, 0.713199, 0.0561356, 0.0708337, 0.0629759 ), AABB( 0.0252903, 2.08597, 0.730044, 0.0524317, 0.0702972, 0.0533878 ), AABB( -0.0777221, 2.08597, 0.730044, 0.0524317, 0.0702972, 0.0533878 ), AABB( 0.0242661, 2.18845, 0.745382, 0.0542079, 0.052211, 0.0394195 ), AABB( -0.078474, 2.18845, 0.745382, 0.0542079, 0.052211, 0.0394195 ), AABB( -0.279877, 2.5213, 0.648355, 0.60368, 0.166534, 0.101561 ), AABB( -0.323804, 2.5213, 0.648355, 0.523459, 0.166544, 0.101561 ), AABB( -0.374629, 2.55073, 0.560417, 0.77409, 0.152846, 0.153963 ), AABB( -0.399461, 2.55073, 0.560417, 0.77409, 0.152846, 0.153953 ) ],
 "vertex_count": 4360
@@ -1096,8 +1097,21 @@ tracks/37/loop_wrap = true
 tracks/37/imported = false
 tracks/37/enabled = true
 tracks/37/keys = PoolRealArray( 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 3.33333, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1 )
+tracks/38/type = "value"
+tracks/38/path = NodePath("AnimationPlayer:current_animation")
+tracks/38/interp = 1
+tracks/38/loop_wrap = true
+tracks/38/imported = false
+tracks/38/enabled = true
+tracks/38/keys = {
+"times": PoolRealArray( 3.3 ),
+"transitions": PoolRealArray( 1 ),
+"update": 2,
+"values": [ "ArmatureAction1" ]
+}
 
 [node name="Scene Root" type="Spatial"]
+script = ExtResource( 1 )
 
 [node name="Armature" type="Skeleton" parent="."]
 bones/0/name = "Belly"
@@ -1304,6 +1318,7 @@ transform = Transform( 0.995227, -0.0962156, -0.0162766, -2.37674e-06, 0.166774,
 [node name="Armature2" type="Spatial" parent="."]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "ArmatureAction3"
 anims/Action = SubResource( 2 )
 anims/ArmatureAction1 = SubResource( 3 )
 anims/ArmatureAction2 = SubResource( 4 )

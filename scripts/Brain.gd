@@ -50,8 +50,11 @@ func _process(delta):
 			
 			#Advance to next turn unless victory
 			if guessedSequence != correctSequence:
+				$Alien/AnimationPlayer.play("ArmatureAction2")
 				guessedSequence.resize(0)
 				turnCounter += 1
 	else:
 		#Game Over!
-		print("END OF THE WORLD")
+		if not $Alien/AnimationPlayer.is_playing():
+			$Alien/AnimationPlayer.play("ArmatureAction1")
+			print("END OF THE WORLD")
