@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/SusOut_title.ogg-04eb4fbfef50b6a13125374422a7814b.oggstr"
+
+[deps]
+
+source_file="res://music/SusOut_title.ogg"
+dest_files=[ "res://.import/SusOut_title.ogg-04eb4fbfef50b6a13125374422a7814b.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
