@@ -11,5 +11,5 @@ dest_files=[ "res://.import/SusOut_title.ogg-04eb4fbfef50b6a13125374422a7814b.og
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0
